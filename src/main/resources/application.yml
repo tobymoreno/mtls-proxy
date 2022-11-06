@@ -6,7 +6,89 @@ logging:
   level:
     root: INFO
     
-#spring.jackson.default-property-inclusion: NON_NULL
+spring.jackson.default-property-inclusion: NON_NULL
+spring.autoconfigure.exclude: org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
 
+# Configuration for http only
+#server:
+#  port: 2700
+
+# Configuration for https with options for mtls or plain tls
 server:
   port: 2700
+  ssl:
+    enabled: false
+    key-store: config/keystore-nmro2.p12
+    key-store-password: mystorepassword
+    trust-store: config/dod-truststore.jks
+    trust-store-password: changeit    
+    client-auth: need
+  
+proxy-settings:
+#  proxy-class: mil.navy.mtls.proxy.handler.ForwardRequest
+  header-access-control: bnBrZV9zdWJqZWN0PWVRdWJlTUkubmF2YWlyLm5hdnkubWlsLG5tcm8uYXBwcy5jbHVzdGVyMS5ub2JsZS5uaXdjLm5hdnkubWlsLG5tcm8uYXBwcy5jbHVzdGVyMS5ub2JsZS5uaXdjLm5hdnkubWlsCg==
+  handler-interceptors: 
+    - mil.navy.mtls.proxy.WebHandlerInterceptor: /root/**
+    - mil.navy.mtls.proxy.EsbInterceptor: /int/ifsapplications/projection/v1/LmMegaPingHandling.svc/**
+    - mil.navy.mtls.proxy.EsbInterceptor: /int/ifsapplications/projection/v1/LmRefMaintPerfActionHandling.svc/**
+#  root-path: /**
+  proxy-class: mil.navy.mtls.proxy.handler.HeaderInjectionRequest
+#  client-subject-name: 
+  one-way: true
+  two-way: false
+  forward-address: https://nmro.apps.cluster-3-ship.noble.niwc.navy.mil
+  forward-port: 443
+  header-injections:
+    - Authorization: Basic aWZzYXBwOmlmc2FwcA==
+    - accept-encoding: text/html;charset=US-ASCII,text/html;charset=UTF-8,text/plain;charset=US-ASCII,text/plain;charset=UTF-8
+
+#  if ssl is commented make sure the endpoint is http transport only
+#  keyStore: rsupp-kstream-keystore.p12
+#  keyStorePassword: secret
+#  trustStore: dod-truststore.jks
+#  trustStorePassword: changeit  
+
+  keyStore: server.keystore
+  keyStorePassword: secret
+  trustStore: truststore.jks
+  trustStorePassword: changeit
+  
+#  keyStore: nmro-keystore.p12
+#  keyStorePassword: secret
+#  trustStore: dod-truststore.jks
+#  trustStorePassword: changeit
+
+#  keyStore: rsupply-server.p12
+#  keyStorePassword: changeit
+#  trustStore: truststore-rsupply.p12
+#  trustStorePassword: mystorepassword
+  
+  
+#  keyStore: lm-keystore.p12
+#  keyStorePassword: changeit
+#  trustStore: lm-keystore.p12
+#  trustStorePassword: changeit
+
+#  one-way: true
+#  two-way: false
+#  forward-address: https://equbemitrain1.navair.navy.mil
+#  forward-port: 443
+# temporary location while cluster1 is down
+#  forward-address: https://nmro.apps.cluster-1-ship.noble.niwc.navy.mil
+#  forward-port: 443
+#  header-injections:
+#    - Authorization: Basic aWZzYXBwOmlmc2FwcA==
+
+# /eQubeMI/eQHTTPListener?token=eQConnectionTest
+#NPKE_SUBJECT
+#NPKE_ISSUER
+#NPKE_SN
+#NPKE_VALID_TO
+#NPKE_OID
+#NPKE_TYPE
+#CERT_TYPE
+#NPKE_IP
+#CLIENT_IP
+#EDIPI_NUM
+#NPKE_UPN
+#NPKE_EXTENSIONS
