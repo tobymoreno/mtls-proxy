@@ -1,0 +1,48 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mil.navy.rsupply;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+//@Configuration
+//@EnableWebSecurity
+public class SecurityConfigOld { //extends WebSecurityConfigurerAdapter {
+
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.authorizeRequests()
+//                .antMatchers("/").permitAll()
+//                .antMatchers("/rsupply/service").permitAll()
+//                .antMatchers("/protected").hasRole("USER")
+//                .and().x509().subjectPrincipalRegex("CN=(.*?),")
+//                .userDetailsService(userDetailsService());
+//    }
+//
+//    @Bean
+//    public UserDetailsService userDetailsService() {
+//        return (UserDetailsService) username -> {
+//            System.out.println(username);
+//            if (username.equals("rsupmast.noble.niwc.navy.mil")) {
+//                return new User(username, "",
+//                        AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"));
+//            } else if (username.equals("MORENO.CHRISTOPHER.LESLIE.1184419765")) {
+//                return new User(username, "",
+//                        AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"));
+//            } else {
+//                throw new UsernameNotFoundException("User:" + username + " not found");
+//            }
+//        };
+//    }
+
+}

@@ -1,0 +1,32 @@
+{
+    "CN": "nmro.apps.cluster1.noble.niwc.navy.mil",
+    "hosts": [
+        "nmro.apps.cluster1.noble.niwc.navy.-mil",
+        "nmro-mobile.apps.cluster1.noble.niwc.navy.mil",
+        "nmro-iam.apps.cluster1.noble.niwc.navy.mil",
+        "images-nmro.apps.cluster1.noble.niwc.navy.mil",
+        "ar-nmro.apps.cluster1.noble.niwc.navy.mil",
+        "fcr-nmro.apps.cluster1.noble.niwc.navy.mil",
+        "matt-nmro.apps.cluster1.noble.niwc.navy.mil",
+        "store-nmro.apps.cluster1.noble.niwc.navy.mil",
+        "vs-nmro.apps.cluster1.noble.niwc.navy.mil",
+        "da-grafana-nmro.apps.cluster1.noble.niwc.navy.mil",
+        "minio-nmro.apps.cluster1.noble.niwc.navy.mil",
+        "nmro-esb.apps.cluster1.noble.niwc.navy.mil",
+        "nmro-rsupply.apps.cluster1.noble.niwc.navy.mil",
+       "nmro-mega.apps.cluster1.noble.niwc.navy.-mil"
+    ],
+    "key": {
+      "algo": "rsa",
+      "size": 2048
+    },
+    "names": [
+      {
+        "C": "US",
+        "ST": "U.S. Government",
+        "L": "DOD",
+        "O": "PKI",
+        "OU": "USN"
+      }
+    ]
+  }

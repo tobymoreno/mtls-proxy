@@ -1,0 +1,140 @@
+<BODY type="Document">
+    <ROWS type="Compound">
+        <ROW type="Document">
+            <ATTRIBUTES type="Compound">
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">ACTIVITY_CODE</NAME>
+                    <VALUE type="Unknown">USS MITS</VALUE>
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">WORK_CENTER</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">FBR_SERIAL_NUMBER</NAME>
+                    <VALUE type="Unknown">185</VALUE>
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">FEEDBACK_TYPE</NAME>
+                    <VALUE type="Unknown">DUPLICATE MRC</VALUE>
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">FEEDBACK_TITLE</NAME>
+                    <VALUE type="Unknown">FBR title 0102-22</VALUE>
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">URGENT</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">URGENT_DATE_TIME</NAME>
+                    <VALUE type="Unknown">2023-03-22-00.00.00</VALUE>
+                    <TYPE type="Unknown">Date</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">DATE_OUT</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">Date</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">EQUIPMENT_NOMENCLATURE</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">EQUIPMENT_SERIAL_NUM</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">EQUIPMENT_LOCATION</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">EQUIPMENT_RIN</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">EQUIPMENT_APL</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">EQUIPMENT_IDENTIFIER</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">EQUIPMENT_ESWBS</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">MIP</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">MRC</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">REMARKS</NAME>
+                    <VALUE type="Unknown">This is the body of my feedback report</VALUE>
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">3MC_SIGNATURE</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">3MC_EMAIL</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">ORIGINATOR_SIGNATURE</NAME>
+                    <VALUE type="Unknown">LWATCH</VALUE>
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+                <ATTRIBUTE type="Document">
+                    <NAME type="Unknown">ORIGINATOR_EMAIL</NAME>
+                    <VALUE type="Unknown" />
+                    <TYPE type="Unknown">String</TYPE>
+                    <KEY type="Unknown">FALSE</KEY>
+                </ATTRIBUTE>
+            </ATTRIBUTES>
+        </ROW>
+    </ROWS>
+</BODY>

@@ -1,0 +1,37 @@
+{
+    "records": [
+
+        {
+            "key": "alice",
+            "value": {
+                "ConfigurationInput": {
+                    "MessageId": "bd6b471d-7f0e-4ea6-8918-63e09d664639",
+                    "MessageType": "NMRO_PMSMIS_TFR",
+                    "MessageDate": "2022-07-06T00:45:11.236Z",
+                    "ConfigurationDetailInput": [{
+                            "ActivityCode": "USS MITS",
+                            "WorkCenter": "",
+                            "FBRSerialNumber": "185",
+                            "FeedbackType": "DUPLICATE MRC",
+                            "FeedbackTitle": "FBR title 0102-22",
+                            "UrgentDateTime": "2023-03-22-00.00.00",
+                            "DateOut": "",
+                            "EquipmentNomenclature": "",
+                            "EquipmentSerialNum": "",
+                            "EquipmentLocation": "",
+                            "EquipmentRIN": "",
+                            "EquipmentAPL": "",
+                            "EquipmentESWBS": "",
+                            "MIP": "",
+                            "MRC": "",
+                            "Remarks": "This is the body of my feedback report",
+                            "3MCSignature": "",
+                            "3MCEmail": "",
+                            "OriginatorSignature": "",
+                            "OriginatorEmail": "LWATCH"
+                        }]
+                }
+            }        
+        }   
+    ]
+}

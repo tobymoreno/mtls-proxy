@@ -1,0 +1,86 @@
+package mil.navy.mtls.proxy.util;
+
+import java.nio.file.Path;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+import nl.altindag.ssl.SSLFactory;
+
+/**
+ * The SSLConfig class contains a Spring Bean to construct the SSL material
+ * based on the given input with the library SSLContext Kickstart.
+ * The library is a lightweight high level library to provide
+ * convenient methods to easily construct the ssl material with
+ * different kinds of input to configure over 40+ http clients.
+ *
+ * @see <a href="https://github.com/Hakky54/sslcontext-kickstart">
+ *      https://github.com/Hakky54/sslcontext-kickstart
+ *      </a>
+ * @see <a href="https://github.com/Hakky54/sslcontext-kickstart#tested-http-clients">
+ *      https://github.com/Hakky54/sslcontext-kickstart#tested-http-clients
+ *      </a>
+ */
+@Component
+public class SSLConfig {
+
+    @Bean
+    @Scope("prototype")
+    public SSLFactory sslFactory(
+            @Value("${client.ssl.one-way-authentication-enabled:false}") boolean oneWayAuthenticationEnabled,
+            @Value("${client.ssl.two-way-authentication-enabled:false}") boolean twoWayAuthenticationEnabled,
+            @Value("${client.ssl.key-store:}") String keyStorePath,
+            @Value("${client.ssl.key-store-password:}") char[] keyStorePassword,
+            @Value("${client.ssl.trust-store:}") String trustStorePath,
+            @Value("${client.ssl.trust-store-password:}") char[] trustStorePassword) {
+        SSLFactory sslFactory = null;
+
+        if (oneWayAuthenticationEnabled) {
+            sslFactory = SSLFactory.builder()
+                    .withTrustMaterial(trustStorePath, trustStorePassword)
+                    .withProtocols("TLSv1.2")
+                    .build();
+        }
+
+        if (twoWayAuthenticationEnabled) {
+            sslFactory = SSLFactory.builder()
+                    .withIdentityMaterial(keyStorePath, keyStorePassword)
+                    .withTrustMaterial(trustStorePath, trustStorePassword)
+                    .withProtocols("TLSv1.2")
+                    .build();
+        }
+
+        return sslFactory;
+    }
+    
+    @Bean
+    @Scope("prototype")
+    public SSLFactory sslFactory(
+            @Value("${client.ssl.one-way-authentication-enabled:false}") boolean oneWayAuthenticationEnabled,
+            @Value("${client.ssl.two-way-authentication-enabled:false}") boolean twoWayAuthenticationEnabled,
+            @Value("${client.ssl.key-store:}") Path keyStorePath,
+            @Value("${client.ssl.key-store-password:}") char[] keyStorePassword,
+            @Value("${client.ssl.trust-store:}") Path trustStorePath,
+            @Value("${client.ssl.trust-store-password:}") char[] trustStorePassword) {
+        SSLFactory sslFactory = null;
+
+        if (oneWayAuthenticationEnabled) {
+            sslFactory = SSLFactory.builder()
+                    .withTrustMaterial(trustStorePath, trustStorePassword)
+                    .withProtocols("TLSv1.2")
+                    .build();
+        }
+
+        if (twoWayAuthenticationEnabled) {
+            sslFactory = SSLFactory.builder()
+                    .withIdentityMaterial(keyStorePath, keyStorePassword)
+                    .withTrustMaterial(trustStorePath, trustStorePassword)
+                    .withProtocols("TLSv1.2")
+                    .build();
+        }
+
+        return sslFactory;
+    }        
+
+}

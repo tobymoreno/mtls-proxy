@@ -1,0 +1,199 @@
+{
+  "header": {
+    "uic": "4445666",
+    "source": "AWN",
+    "dest": "R_SUPPLY",
+    "timestamp": "2008RZ"
+  },
+  "message": {
+    "awnpredeployment": null,
+    "awnreqmntsReviewUpd": null,
+    "awnrequisitionUpd": null,
+    "awnstoreroomIssueUpd": null,
+    "awnrequestMaterial": {
+      "requestMaterial": [
+        {
+          "messageId": "message_id_t",
+          "messageType": "REQUEST",
+          "organizationCode": "org_code_t",
+          "niin": "niin_t",
+          "partNumber": {
+            "cage": "cage_t",
+            "referenceNbr": "ref_no_t"
+          },
+          "cosalType": "cosal_type_t",
+          "unitOfIssue": "unit_of_issue_t",
+          "nomenclature": "nomenclature_t",
+          "quantity": 1,
+          "requiredDeliveryDt": "date_t",
+          "adviceCode": "advice_code_t",
+          "urgencyOfNeed": "urgency_of_need_t",
+          "failedPartIndicator": -32768,
+          "jcnSequenceNbr": "jcn_seq_nbr_t",
+          "wcidGenUic": "uic_t",
+          "wcidGenSys": "alpha_num_2t",
+          "wcidGenDate": "date_t",
+          "wcidGenSeqNbr": 1,
+          "apl": "apl_t",
+          "aplNomenclature": "apl_nomen_t",
+          "eic": "eic_t",
+          "equipmentName": "equip_name_t",
+          "sourceIndicator": "source_indicator_t",
+          "cosalItem": "flag_t",
+          "jobSummary": "job_summary_t",
+          "quantityPerAppl": 1,
+          "allowanceNoteCode": "alpha_num_t",
+          "sourceCode": "maint_source_code_t",
+          "useMaintenanceCode": "alpha_num_t",
+          "repairMaintenanceCode": "alpha_num_t",
+          "recoverCode": "alpha_num_t",
+          "benefitingUic": "uic_t",
+          "availability": {
+            "availabilityYear": "availability_year_t",
+            "availabilityType": "availability_type_t",
+            "availabilityNbr": "availability_nbr_t"
+          },
+          "originatingUic": "uic_t",
+          "originatingWorkcenter": "org_code_t",
+          "originatingSerialNbr": 1,
+          "itemType": "item_type_t",
+          "locationQty": {
+            "locQtyPair": [
+              {
+                "location": "location_t",
+                "quantity": 1
+              }
+            ]
+          },
+          "processMessage": "message_t",
+          "documentNumber": {
+            "svcCode": "fc_svc_dsg_t",
+            "organizationCode": "org_code_t",
+            "documentDate": "date_t",
+            "documentNrSerial": "document_nr_serial_code_t",
+            "sufCd": "suf_code_t"
+          },
+          "requestNumber": {
+            "workCenter": "work_center_t",
+            "requestDate": "date_t",
+            "requestNrSerial": "request_nr_serial_code_t"
+          },
+          "fundCode": "fund_code_t",
+          "unitPrice": 1,
+          "cog": "cog_symbol_t",
+          "milstripRdd": "milstrip_rdd_t",
+          "projectCode": "proj_code_t",
+          "supplementaryAddr": "supplementary_address_t",
+          "casualtyRpt": "alpha_num_t",
+          "signalCode": "signal_code_t",
+          "originalRequestNumber": {
+            "workCenter": "work_center_t",
+            "requestDate": "date_t",
+            "requestNrSerial": "request_nr_serial_code_t"
+          },
+          "originalQty": 1,
+          "federalSupplyClass": "federal_supply_code_t",
+          "jon": "jon_t",
+          "errorCode": 1,
+          "errorMessage": "error_msg_t"
+        },
+        {
+          "messageId": "message_id_t",
+          "messageType": "REQUEST",
+          "organizationCode": "org_code_t",
+          "niin": "niin_t",
+          "partNumber": {
+            "cage": "cage_t",
+            "referenceNbr": "ref_no_t"
+          },
+          "cosalType": "cosal_type_t",
+          "unitOfIssue": "unit_of_issue_t",
+          "nomenclature": "nomenclature_t",
+          "quantity": 1,
+          "requiredDeliveryDt": "date_t",
+          "adviceCode": "advice_code_t",
+          "urgencyOfNeed": "urgency_of_need_t",
+          "failedPartIndicator": -32768,
+          "jcnSequenceNbr": "jcn_seq_nbr_t",
+          "wcidGenUic": "uic_t",
+          "wcidGenSys": "alpha_num_2t",
+          "wcidGenDate": "date_t",
+          "wcidGenSeqNbr": 1,
+          "apl": "apl_t",
+          "aplNomenclature": "apl_nomen_t",
+          "eic": "eic_t",
+          "equipmentName": "equip_name_t",
+          "sourceIndicator": "source_indicator_t",
+          "cosalItem": "flag_t",
+          "jobSummary": "job_summary_t",
+          "quantityPerAppl": 1,
+          "allowanceNoteCode": "alpha_num_t",
+          "sourceCode": "maint_source_code_t",
+          "useMaintenanceCode": "alpha_num_t",
+          "repairMaintenanceCode": "alpha_num_t",
+          "recoverCode": "alpha_num_t",
+          "benefitingUic": "uic_t",
+          "availability": {
+            "availabilityYear": "availability_year_t",
+            "availabilityType": "availability_type_t",
+            "availabilityNbr": "availability_nbr_t"
+          },
+          "originatingUic": "uic_t",
+          "originatingWorkcenter": "org_code_t",
+          "originatingSerialNbr": 1,
+          "itemType": "item_type_t",
+          "locationQty": {
+            "locQtyPair": [
+              {
+                "location": "location_t",
+                "quantity": 1
+              }
+            ]
+          },
+          "processMessage": "message_t",
+          "documentNumber": {
+            "svcCode": "fc_svc_dsg_t",
+            "organizationCode": "org_code_t",
+            "documentDate": "date_t",
+            "documentNrSerial": "document_nr_serial_code_t",
+            "sufCd": "suf_code_t"
+          },
+          "requestNumber": {
+            "workCenter": "work_center_t",
+            "requestDate": "date_t",
+            "requestNrSerial": "request_nr_serial_code_t"
+          },
+          "fundCode": "fund_code_t",
+          "unitPrice": 1,
+          "cog": "cog_symbol_t",
+          "milstripRdd": "milstrip_rdd_t",
+          "projectCode": "proj_code_t",
+          "supplementaryAddr": "supplementary_address_t",
+          "casualtyRpt": "alpha_num_t",
+          "signalCode": "signal_code_t",
+          "originalRequestNumber": {
+            "workCenter": "work_center_t",
+            "requestDate": "date_t",
+            "requestNrSerial": "request_nr_serial_code_t"
+          },
+          "originalQty": 1,
+          "federalSupplyClass": "federal_supply_code_t",
+          "jon": "jon_t",
+          "errorCode": 1,
+          "errorMessage": "error_msg_t"
+        }
+      ],
+      "version": null
+    },
+    "awnstockDataRequest": null,
+    "awnreceiptUpd": null,
+    "awntechEditUpd": null,
+    "awnavailability": null,
+    "awnsuspenseUpd": null,
+    "awnstatusUpd": null,
+    "awnasiresponse": null,
+    "awnjcncomplete": null,
+    "awnasirequest": null
+  },
+  "version": null
+}

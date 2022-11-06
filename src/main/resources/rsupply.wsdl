@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="RSupplyService"
+    targetNamespace="http://rsupply.scn.spawar.navy.mil"
+    xmlns:tns="http://rsupply.scn.spawar.navy.mil"
+    xmlns:awn="http://rsupply.scn.spawar.navy.mil/awn"
+    xmlns:faults="http://rsupply.scn.spawar.navy.mil/faults"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+  <documentation>
+    This web service accesses a Department of Defense Computer System. This web 
+    service system, including all related equipment, networks, and network devices 
+    (specifically including Internet access) are provided only for authorized 
+    U.S. Government use. DoD computer systems may be monitored for all lawful purposes, 
+    including to ensure that their use is authorized, for management of the system, 
+    to facilitate protection against unauthorized access, and to verify security 
+    procedures, survivability, and operational security. Monitoring includes active 
+    attacks by authorized DoD entities to test or verify the security of this system. 
+    During monitoring, information may be examined, recorded, copied and used for 
+    authorized purposes. All information, including personal information, placed or 
+    sent over this system may be monitored. Use of this DoD web service, authorized 
+    or unauthorized, constitutes consent to monitoring. Unauthorized use may subject 
+    you to criminal prosecution. Evidence of unauthorized use collected during action. 
+    Use of this web service constitutes consent to monitoring for these purposes.
+  </documentation>
+
+  <types>
+    <xs:schema version="1.0"
+        targetNamespace="http://rsupply.scn.spawar.navy.mil"
+        xmlns:tns="http://rsupply.scn.spawar.navy.mil"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+      <xs:import namespace="http://rsupply.scn.spawar.navy.mil/awn"
+          schemaLocation="AWNMessage.xsd"/>
+
+      <xs:import namespace="http://rsupply.scn.spawar.navy.mil/faults"
+          schemaLocation="faults.xsd"/>
+
+      <xs:element name="processMessage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="awn:AWNMessage"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="processMessageResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="awn:AWNMessage"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+    </xs:schema>
+  </types>
+
+  <message name="RSupplyMsg">
+    <part name="processMessage" element="tns:processMessage"/>
+  </message>
+
+  <message name="RSupplyResponseMsg">
+    <part name="processMessageResponse" element="tns:processMessageResponse"/>
+  </message>
+
+  <message name="InputFaultMsg">
+    <part name="inputMessageFault" element="faults:inputMessageFault"/>
+  </message>
+
+  <portType name="RSupplyPort">
+    <operation name="processMessage">
+      <input message="tns:RSupplyMsg"/>
+      <output message="tns:RSupplyResponseMsg"/>
+      <fault name="processMessageFault" message="tns:InputFaultMsg"/>
+    </operation>
+  </portType>
+
+  <binding name="RSupplyBinding" type="tns:RSupplyPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+    <operation name="processMessage">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="processMessageFault">
+        <soap:fault name="processMessageFault" use="literal"/>
+      </fault>
+    </operation>
+
+  </binding>
+
+  <service name="RSupplyService">
+    <port name="RSupplyPort" binding="tns:RSupplyBinding">
+      <soap:address location="REPLACE_WITH_ACTUAL_URL"/>
+    </port>
+  </service>
+</definitions>
