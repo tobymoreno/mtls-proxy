@@ -15,10 +15,16 @@ pipeline {
             }
         }
         stage("Push image to Hub") {
-            withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhub-pwd')]) {
-                sh 'docker login -u 1rom2ny -p ${dockerhub-pwd}'
-                sh 'docker push 1rom2ny/mtls-proxy:v1'
+            steps {
+                script {
+                    withCredentials([string(credentialsId: 'dockerhub-pwd-2', variable: 'dockerhubpwd2')]) {
+                        // some block
+                        sh 'docker login -u 1rom2ny -p ${dockerhubpwd2}'
+                        sh 'docker push 1rom2ny/mtls-proxy:v1'
+                    }
+                }
             }
+
         }
     }
 }
