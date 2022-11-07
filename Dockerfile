@@ -7,4 +7,4 @@ COPY target/*.jar /app/
 COPY config/*.* /app/config/
 
 WORKDIR "/app"
-ENTRYPOINT ["java", "-jar", "mtls-proxy-0.0.1-SNAPSHOT.jar", "&&", "tail", "-f", "/dev/null"]
+ENTRYPOINT ["java", "-jar", "devops-integration.jar", "&&", "tail", "-f", "/dev/null"]
