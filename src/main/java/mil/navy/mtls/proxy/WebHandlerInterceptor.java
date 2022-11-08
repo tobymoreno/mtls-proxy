@@ -38,7 +38,7 @@ public class WebHandlerInterceptor implements HandlerInterceptor {
 //            throw new Exception("Internal Error");
         } else {
             System.out.println("I'm processing");
-            String[] response = new String[]{"Loopback Test Version 3"};
+            String[] response = new String[]{"Loopback Test Version 4"};
             responseServlet.getWriter().write(JSON.getInstance().stringify(response));
         }
 
