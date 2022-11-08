@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mtls-proxy
+  namespace: default
+  labels:
+    app: mtls-proxy
+spec:
+  ports:
+    - protocol: TCP
+      port: 2700
+      targetPort: 2700
+      nodePort: 32722
+  selector:
+    app: mtls-proxy
+  type: NodePort
