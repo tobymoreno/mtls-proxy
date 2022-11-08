@@ -37,8 +37,8 @@ public class WebHandlerInterceptor implements HandlerInterceptor {
         if (servletPath != null && servletPath.startsWith("/error")) {
 //            throw new Exception("Internal Error");
         } else {
-            System.out.println("I'm processing version 6");
-            String[] response = new String[]{"Loopback Test Version 6"};
+            System.out.println("I'm processing version 6.2");
+            String[] response = new String[]{"Loopback Test Version 6.5"};
             responseServlet.getWriter().write(JSON.getInstance().stringify(response));
         }
 
