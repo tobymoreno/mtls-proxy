@@ -26,5 +26,13 @@ pipeline {
             }
 
         }
+        stage("Deploying to Kubernetes") {
+            steps {
+                script {
+                    sh 'kubectl apply -f deploymentservice.yml'
+                    sh 'kubectl rollout restart -n default deployment mtls-proxy'
+                }
+            }
+        }
     }
 }
