@@ -31,6 +31,7 @@ pipeline {
                 script {
                     sh 'kubectl apply -f deploymentservice-cluster.yml'
                     sh 'kubectl apply -f mtls-loadbalancer.yaml'
+                    sh 'sleep 5'
                     sh 'kubectl get svc'
                     sh 'kubectl rollout restart -n default deployment mtls-proxy'
                 }
