@@ -10,17 +10,23 @@ pipeline {
         stage("Build Docker Image") {
             steps {
                 script {
-                    sh 'docker build -t 1rom2ny/mtls-proxy:v7 --platform linux/amd64 .'
+                    sh 'docker build -t devsecopsenv.jfrog.io/default-docker/1rom2ny/mtls-proxy:v7 --platform linux/amd64 .'
                 }
             }
         }
         stage("Push image to Hub") {
             steps {
                 script {
-                    withCredentials([string(credentialsId: 'dockerhub-pwd-2', variable: 'dockerhubpwd2')]) {
+                //   withCredentials([string(credentialsId: 'dockerhub-pwd-2', variable: 'dockerhubpwd2')]) {
+                //        // some block
+                //        sh 'docker login -u 1rom2ny -p ${dockerhubpwd2}'
+                //        sh 'docker push 1rom2ny/mtls-proxy:v7'
+                //    }
+                    withCredentials([string(credentialsId: 'jfrog-pwd', variable: 'jfrog-pwd')]) {
                         // some block
-                        sh 'docker login -u 1rom2ny -p ${dockerhubpwd2}'
-                        sh 'docker push 1rom2ny/mtls-proxy:v7'
+                        // some block
+                        sh 'docker login -utoby.moreno@gmail.com devsecopsenv.jfrog.io -p ${jfrog-pwd}'
+                        sh 'docker devsecopsenv.jfrog.io/default-docker/push 1rom2ny/mtls-proxy:v7'
                     }
                 }
             }
