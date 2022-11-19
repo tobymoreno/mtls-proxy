@@ -26,7 +26,7 @@ pipeline {
                         // some block
                         // some block
                         sh 'docker login -utoby.moreno@gmail.com devsecopsenv.jfrog.io -p ${jfrog-pwd}'
-                        sh 'docker devsecopsenv.jfrog.io/default-docker/push 1rom2ny/mtls-proxy:v7'
+                        sh 'docker push devsecopsenv.jfrog.io/default-docker/1rom2ny/mtls-proxy:v7'
                     }
                 }
             }
