@@ -36,6 +36,8 @@ pipeline {
         stage("Deploying to Kubernetes") {
             steps {
                 script {
+                    sh 'kubectl apply -f secrets.yml'
+                    sh 'kubectl patch serviceaccount default -p "{\"imagePullSecrets\": [{\"name\": \"acr-auth\"}]}" -n default'
                     sh 'kubectl apply -f deploymentservice-cluster.yml'
                     sh 'kubectl apply -f mtls-loadbalancer.yaml'
                     sh 'sleep 5'

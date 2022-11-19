@@ -19,7 +19,9 @@ spec:
         - name: mtls-proxy
           image: devsecopsenv.jfrog.io/default-docker/1rom2ny/mtls-proxy:v7
           imagePullPolicy: Always
-      restartPolicy: Always      
+      restartPolicy: Always
+          
+      
       
 ---
 
