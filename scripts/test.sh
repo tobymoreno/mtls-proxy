@@ -2,6 +2,8 @@
 
 IMAGE_CHECK="Image is up to date"
 
+gcloud container clusters get-credentials autopilot-cluster-1 --zone us-west3
+
 while [ 1 -ne 0 ]
 do
     date
@@ -13,6 +15,7 @@ do
     else
         echo "There is a new image. Update the service"
         kubectl apply -f ../secrets.yml
+        kubectl patch serviceaccount default -p '{"imagePullSecrets": [{"name": "acr-auth"}]}' -n default
         kubectl replace -f ../deploymentservice-cluster.yml
         sleep 2
         kubectl apply -f ../mtls-loadbalancer.yaml
