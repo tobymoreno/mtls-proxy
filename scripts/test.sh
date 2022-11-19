@@ -25,7 +25,7 @@ do
         sleep 3
     fi
   echo "Sleeping ..."
-  sleep 60
+  sleep 25
 done
 
 
