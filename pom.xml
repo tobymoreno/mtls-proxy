@@ -17,9 +17,22 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
+    
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>a0a8uzvzp5bhf-artifactory-primary-0-releases</name>
+            <url>https://devsecopsenv.jfrog.io/artifactory/default-libs-release</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>a0a8uzvzp5bhf-artifactory-primary-0-snapshots</name>
+            <url>https://devsecopsenv.jfrog.io/artifactory/default-libs-snapshot</url>
+        </snapshotRepository>        
+    </distributionManagement>    
  
     <dependencies>
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>wsdl4j</groupId>
             <artifactId>wsdl4j</artifactId>
         </dependency>            -->
@@ -56,7 +69,7 @@
             <version>4.9.2</version>
             <type>jar</type>
         </dependency>
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>mil.navy.logit</groupId>
             <artifactId>udex-api-lib</artifactId>
             <version>1.0</version>
@@ -82,7 +95,7 @@
                     <groupId>org.glassfish.jaxb</groupId>
                     <artifactId>jaxb-runtime</artifactId>
                 </dependency>
-<!--                <dependency>
+                <!--                <dependency>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-security</artifactId>
                 </dependency>                -->
@@ -100,6 +113,6 @@
              
                                     
         </plugins>
-    <finalName>devops-integration</finalName>
+        <finalName>devops-integration</finalName>
     </build>
 </project>

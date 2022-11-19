@@ -1,0 +1,37 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mtls-proxy
+  namespace: default
+  labels:
+    app: mtls-proxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mtls-proxy
+  template:
+    metadata:
+      labels:
+        app: mtls-proxy
+    spec:
+      containers:
+        - name: mtls-proxy
+          image: docker.io/1rom2ny/mtls-proxy:v7
+          imagePullPolicy: Always
+      restartPolicy: Always      
+      
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mtls-service-cluster-ip
+spec:
+  type: ClusterIP
+  selector:
+    app: mtls-proxy
+  ports:
+    - protocol: TCP
+      port: 2700
+      targetPort: 2700

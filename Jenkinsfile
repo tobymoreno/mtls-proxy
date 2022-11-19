@@ -29,7 +29,9 @@ pipeline {
         stage("Deploying to Kubernetes") {
             steps {
                 script {
-                    sh 'kubectl apply -f deploymentservice.yml'
+                    sh 'kubectl apply -f deploymentservice-cluster.yml'
+                    sh 'kubectl apply -f mtls-loadbalancer.yaml'
+                    sh 'kubectl get svc'
                     sh 'kubectl rollout restart -n default deployment mtls-proxy'
                 }
             }
