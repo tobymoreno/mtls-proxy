@@ -10,7 +10,7 @@ pipeline {
         stage("Build Docker Image") {
             steps {
                 script {
-                    sh 'docker build -t 1rom2ny/mtls-proxy:v1 .'
+                    sh 'docker build -t 1rom2ny/mtls-proxy:v7 .'
                 }
             }
         }
