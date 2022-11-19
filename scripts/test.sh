@@ -5,7 +5,7 @@ IMAGE_CHECK="Image is up to date"
 while [ 1 -ne 0 ]
 do
     date
-    docker login -utoby.moreno@gmail.com devsecopsenv.jfrog.io -p "${jfrog-pwd}"
+    docker login -utoby.moreno@gmail.com devsecopsenv.jfrog.io -p "${jfrog_pwd}"
     docker pull 1rom2ny/mtls-proxy:v7 | grep "${IMAGE_CHECK}"
 
     if [ $? -ne 1 ]; then 
