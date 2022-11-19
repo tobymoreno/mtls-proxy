@@ -20,7 +20,7 @@ pipeline {
                     withCredentials([string(credentialsId: 'dockerhub-pwd-2', variable: 'dockerhubpwd2')]) {
                         // some block
                         sh 'docker login -u 1rom2ny -p ${dockerhubpwd2}'
-                        sh 'docker push 1rom2ny/mtls-proxy:v1'
+                        sh 'docker push 1rom2ny/mtls-proxy:v7'
                     }
                 }
             }
