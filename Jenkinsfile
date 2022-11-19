@@ -22,10 +22,11 @@ pipeline {
                 //        sh 'docker login -u 1rom2ny -p ${dockerhubpwd2}'
                 //        sh 'docker push 1rom2ny/mtls-proxy:v7'
                 //    }
+
                     withCredentials([string(credentialsId: 'jfrog-pwd', variable: 'jfrog-pwd')]) {
                         // some block
                         // some block
-                        sh 'docker login -utoby.moreno@gmail.com devsecopsenv.jfrog.io -p ${jfrog-pwd}'
+                        sh 'docker login -utoby.moreno@gmail.com devsecopsenv.jfrog.io -p AKCp8nHDosPdDAXipdKk1jpqZ2WtRggGRVXeUDuTibePJfdkE6h4MKHMWhwEJHc9iADWhZYsm'
                         sh 'docker push devsecopsenv.jfrog.io/default-docker/1rom2ny/mtls-proxy:v7'
                     }
                 }
