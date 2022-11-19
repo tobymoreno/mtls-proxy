@@ -8,7 +8,7 @@ while [ 1 -ne 0 ]
 do
     date
     docker login -utoby.moreno@gmail.com devsecopsenv.jfrog.io -p "${jfrog_pwd}"
-    docker pull 1rom2ny/mtls-proxy:v7 | grep "${IMAGE_CHECK}"
+    docker pull devsecopsenv.jfrog.io/default-docker/1rom2ny/mtls-proxy:v7 | grep "${IMAGE_CHECK}"
 
     if [ $? -ne 1 ]; then 
         echo "${IMAGE_CHECK}"
