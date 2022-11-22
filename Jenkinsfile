@@ -22,7 +22,7 @@ pipeline {
                 //        sh 'docker login -u 1rom2ny -p ${dockerhubpwd2}'
                 //        sh 'docker push 1rom2ny/mtls-proxy:v7'
                 //    }
-
+                // sb changes
                     withCredentials([string(credentialsId: 'jfrog-pwd', variable: 'jfrog-pwd')]) {
                         // some block
                         // some block
