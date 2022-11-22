@@ -37,8 +37,8 @@ public class WebHandlerInterceptor implements HandlerInterceptor {
         if (servletPath != null && servletPath.startsWith("/error")) {
 //            throw new Exception("Internal Error");
         } else {
-            System.out.println("I'm processing version 6.9.5 in EKS");
-            String[] response = new String[]{"EKS Loopback Test Version 6.9.5"};
+            System.out.println("I'm processing version 6.9.6 in EKS");
+            String[] response = new String[]{"EKS Loopback Test Version 6.9.6"};
             responseServlet.getWriter().write(JSON.getInstance().stringify(response));
         }
 
