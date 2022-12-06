@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2022-12-06T19:41:18.029Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.56" etag="fxLs4oHlA2ruUNjiRqc8" version="20.6.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-06T19:44:59.834Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.56" etag="Xki7jcz6dhvRa99UxSCl" version="20.6.0" type="github">
   <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
     <mxGraphModel dx="1178" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="a9_QnyHbKXq11Pa4QRQG-97" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="210" y="10" width="580" height="930" as="geometry" />
+          <mxGeometry x="140" y="10" width="670" height="930" as="geometry" />
         </mxCell>
         <mxCell id="5" value="CI/CD Pipeline" style="shape=process;whiteSpace=wrap;align=center;verticalAlign=middle;size=0.0475;fontStyle=1;strokeWidth=3;fillColor=#FFCCCC" parent="1" vertex="1">
           <mxGeometry x="256" y="80" width="469" height="50" as="geometry" />
@@ -109,7 +109,7 @@
         <mxCell id="8jn_kO8mg8kO_SJxLtCt-113" value="&lt;p style=&quot;margin: 0px; margin-top: 4px; text-align: center; text-decoration: underline;&quot;&gt;&lt;strong&gt;Build&lt;br&gt;&lt;/strong&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;NGINX Docker&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;Build&lt;/p&gt;" style="verticalAlign=middle;align=center;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=1;fontStyle=1;strokeWidth=3;fillColor=#E6FFCC" parent="1" vertex="1">
           <mxGeometry x="243.4999999999999" y="672" width="110" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="8jn_kO8mg8kO_SJxLtCt-115" value="&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;u&gt;Scan&lt;/u&gt;&lt;/p&gt;" style="verticalAlign=middle;align=center;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=1;fontStyle=1;strokeWidth=3;fillColor=#E6FFCC" parent="1" vertex="1">
+        <mxCell id="8jn_kO8mg8kO_SJxLtCt-115" value="&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;u&gt;Scan&lt;/u&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px; margin-left: 8px;&quot;&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/p&gt;" style="verticalAlign=middle;align=center;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=1;fontStyle=1;strokeWidth=3;fillColor=#E6FFCC" parent="1" vertex="1">
           <mxGeometry x="575" y="350" width="110" height="90" as="geometry" />
         </mxCell>
         <mxCell id="8jn_kO8mg8kO_SJxLtCt-122" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://2ality.com/2011/08/jsdoc-intro/jsdoc_screen.jpg;" parent="1" vertex="1">
@@ -192,6 +192,9 @@
               <mxPoint x="300.00000000000006" y="318" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="a9_QnyHbKXq11Pa4QRQG-108" value="scan" style="whiteSpace=wrap;align=center;verticalAlign=middle;fontStyle=1;strokeWidth=3;fillColor=#FFFFCC" vertex="1" parent="1">
+          <mxGeometry x="161" y="229" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
